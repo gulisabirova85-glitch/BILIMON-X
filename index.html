@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BILIMON X — Next-Generation Examination Ecosystem</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <script src="lucide.min.js"></script>
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Yon menyu (Sidebar) -->
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <div class="brand">
+                    <div class="brand-badge">BX</div>
+                    <div class="brand-text">
+                        <h1>BILIMON <span>X</span></h1>
+                        <small>PRO EDITION</small>
+                    </div>
+                </div>
+                <button id="sidebar-toggle" class="icon-btn" title="Menyuni yig'ish">
+                    <i data-lucide="chevron-left"></i>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-label">ASOSIY MENYU</div>
+                <a href="#dashboard" data-view="dashboard" class="nav-item active">
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Boshqaruv paneli</span>
+                </a>
+                <a href="#subjects" data-view="subjects" class="nav-item">
+                    <i data-lucide="book-marked"></i>
+                    <span>Barcha fanlar</span>
+                    <span class="nav-pill">15</span>
+                </a>
+                <a href="#exam-center" data-view="exam-center" class="nav-item">
+                    <i data-lucide="file-text"></i>
+                    <span>Imtihon markazi</span>
+                </a>
+                <a href="#practice" data-view="practice" class="nav-item">
+                    <i data-lucide="target"></i>
+                    <span>Amaliyot rejimi</span>
+                </a>
+                <a href="#daily" data-view="daily" class="nav-item">
+                    <i data-lucide="zap"></i>
+                    <span>Kunlik sinov</span>
+                    <span class="pulse-dot"></span>
+                </a>
+
+                <div class="nav-label">TAHLIL VA REYTING</div>
+                <a href="#analytics" data-view="analytics" class="nav-item">
+                    <i data-lucide="bar-chart-3"></i>
+                    <span>Natijalar & Tahlil</span>
+                </a>
+                <a href="#history" data-view="history" class="nav-item">
+                    <i data-lucide="history"></i>
+                    <span>Test tarixi</span>
+                </a>
+                <a href="#achievements" data-view="achievements" class="nav-item">
+                    <i data-lucide="award"></i>
+                    <span>Yutuqlar</span>
+                </a>
+                <a href="#leaderboard" data-view="leaderboard" class="nav-item">
+                    <i data-lucide="trophy"></i>
+                    <span>Peshqadamlar</span>
+                </a>
+
+                <div class="nav-label">TIZIM</div>
+                <a href="#settings" data-view="settings" class="nav-item">
+                    <i data-lucide="settings"></i>
+                    <span>Sozlamalar</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-card">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=faces" alt="Avatar">
+                    <div class="user-info">
+                        <h4 id="user-name">Alisher Navoiy</h4>
+                        <p><span id="user-xp">1450 XP</span> • Daraja <span id="user-level">5</span></p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Asosiy oyna -->
+        <main class="main-area">
+            <header class="topbar">
+                <div class="search-box">
+                    <i data-lucide="search"></i>
+                    <input type="text" id="global-search" placeholder="Fanlar, mavzular yoki testlarni qidirish...">
+                </div>
+
+                <div class="topbar-actions">
+                    <div class="streak-badge">
+                        <i data-lucide="flame"></i>
+                        <span><strong id="streak-count">7</strong> kun ketma-ket</span>
+                    </div>
+
+                    <button id="theme-toggle" class="icon-btn" title="Mavzuni o'zgartirish">
+                        <i data-lucide="sun"></i>
+                    </button>
+
+                    <button id="quick-start-exam" class="btn-primary">
+                        <i data-lucide="play"></i>
+                        <span>Tezkor test</span>
+                    </button>
+                </div>
+            </header>
+
+            <div id="content-container" class="content-area">
+                <!-- Sahifalar shu yerga yuklanadi -->
+            </div>
+        </main>
+    </div>
+
+    <div id="toast-container" class="toast-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
